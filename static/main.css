@@ -39,13 +39,55 @@ LI.article-cluster {
   padding: 0.5em;
 }
 
-SPAN.scanning {
-    animation: todo;
+SPAN {
+	transform-origin: 50% 50%;
+	perspective: 500px;
 }
 
-@keyframes todo {
-    0%, 100% {width: auto; height: auto; color: #333;}
-    50% {width: 50%; height: 50%; color: #660; }
+.scanning1 {
+    animation: todo1 1s linear 0s infinite alternate;
+}
+
+.scanning2 {
+    animation: todo2 1s linear 0s infinite alternate;
+}
+
+.scanning3 {
+    animation: todo3 1s linear 0s infinite alternate;
+}
+
+.scanning4 {
+    animation: todo4 1s linear 0s infinite alternate;
+}
+
+.scanning5 {
+    animation: todo5 1s linear 0s infinite alternate;
+}
+
+
+@keyframes todo1 {
+	0%, 20% {transform: translateX(0px); color: #663;}
+	10% {transform: scale(1.25); color: #EE0;}
+}
+
+@keyframes todo2 {
+	20%, 40% {transform: translateX(0px); color: #663;}
+	30% {transform: scale(1.25); color: #EE0;}
+}
+
+@keyframes todo3 {
+	40%, 60% {transform: translateX(0px); color: #663;}
+	50% {transform: scale(1.25); color: #EE0;}
+}
+
+@keyframes todo4 {
+	60%, 80% {transform: translateX(0px); color: #663;}
+	70% {transform: translate3D(0,0,2em); color: #EE0;}
+}
+
+@keyframes todo5 {
+	80%, 100% {transform: translateX(0px); color: #663;}
+	90% {transform: scale(1.25); color: #EE0;}
 }
 
 TABLE::before {
@@ -59,7 +101,7 @@ A.title {
 }
 
 UL.social-network-results {
-  //text-align: left;
+  text-align: left;
   margin-left: 2em;
   background-color: #FFFFF2;
 }
@@ -141,16 +183,11 @@ SPAN.new-page {
 }
 
 A.about {
-  //text-align: left;
   color: darkgreen;
   text-decoration: none;
-  //position:absolute;
-  right: 7em;
 }
 
 A.settings {
- //position: relative;
-  right: 1em;
   text-decoration: none;
   color: black;
   cursor: pointer;
